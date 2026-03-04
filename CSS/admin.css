@@ -1,0 +1,703 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(
+        rgba(247,245,242,0.9),
+        rgba(247,245,242,0.9)
+    ),
+    url("../IMG/fondo-kaiu.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--negro);
+}
+
+/* =========================
+   ADMIN GLOBAL
+========================= */
+.admin-panel {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.admin-main-title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #0f172a;
+    margin-bottom: 30px;
+    padding: 18px;
+    border-radius: 16px;
+    background: linear-gradient(135deg,#f8fafc,#e2e8f0);
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    animation: fadeDown .6s ease;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   CARD FORM
+========================= */
+.admin-form-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0,0,0,.15);
+    animation: fadeUp .5s ease;
+}
+
+.admin-form-card .card-header {
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: .6px;
+}
+
+.admin-form-card input,
+.admin-form-card select {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: all .25s ease;
+}
+
+.admin-form-card input:focus,
+.admin-form-card select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.25);
+}
+
+/* 🔥 BOTONES FORM */
+.admin-form-card button,
+.admin-form-card .btn-secondary {
+    border-radius: 14px;
+    font-weight: 700;
+    padding: 10px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.admin-form-card button:hover,
+.admin-form-card .btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.18);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   TABLE
+========================= */
+.admin-table {
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.admin-table thead th {
+    background: transparent;
+    color: #475569;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    border: none;
+}
+
+/* =========================
+   ROW HOVER BRUTAL
+========================= */
+.admin-table tbody tr {
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: transform .25s ease, box-shadow .25s ease;
+    animation: rowFade .4s ease;
+}
+
+.admin-table tbody tr:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(0,0,0,.18);
+}
+
+/* =========================
+   CELLS HOVER
+========================= */
+.admin-table td {
+    padding: 14px 12px;
+    border: none;
+    vertical-align: middle;
+    color: #1e293b;
+    transition: transform .25s ease;
+}
+
+.admin-table tbody tr:hover td {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   ID BADGE
+========================= */
+.badge-admin {
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+    color: #0369a1;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: transform .25s ease;
+}
+
+.admin-table tbody tr:hover .badge-admin {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   ROLES
+========================= */
+.rol {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .8rem;
+    display: inline-block;
+    transition: transform .25s ease;
+}
+
+.admin-table tbody tr:hover .rol {
+    transform: translateY(-3px);
+}
+
+/* 🎯 ROLES COLORS */
+.administrador { background:#ede9fe; color:#5b21b6; }
+.logistica { background:#e0f2fe; color:#0369a1; }
+.mantenimiento { background:#dcfce7; color:#166534; }
+.jefe-de-logistica { background:#fff7ed; color:#9a3412; }
+.jefe-de-mantenimiento { background:#fef2f2; color:#991b1b; }
+
+/* =========================
+   ESTADOS
+========================= */
+.estado-activo,
+.estado-inactivo,
+.estado-entregado {
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: .8rem;
+    transition: transform .25s ease;
+}
+
+.estado-activo {
+    background: linear-gradient(135deg,#dcfce7,#86efac);
+    color: #14532d;
+}
+
+.estado-inactivo {
+    background: linear-gradient(135deg,#fee2e2,#fca5a5);
+    color: #7f1d1d;
+}
+
+.estado-entregado {
+    background: linear-gradient(135deg,#dcfce7,#86efac);
+    color: #14532d;
+}
+
+.admin-table tbody tr:hover .estado-activo,
+.admin-table tbody tr:hover .estado-inactivo,
+.admin-table tbody tr:hover .estado-entregado {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   ACTIONS
+========================= */
+.acciones-admin {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* ✏️ EDIT */
+.btn-editar {
+    background: linear-gradient(135deg,#fde047,#facc15);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: .85rem;
+    cursor: pointer;
+    transition: transform .25s ease;
+}
+
+.btn-editar:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* 🔁 BOTONES INACTIVAR Y REACTIVAR */
+.btn-estado-inactivar {
+    background: linear-gradient(135deg,#334155,#1e293b);
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: .75rem;
+    font-weight: 600;
+    transition: transform .25s ease;
+}
+
+.btn-estado-inactivar:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.btn-estado-reactivar {
+    background: linear-gradient(135deg,#97a0ae,#259f0f);
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: .75rem;
+    font-weight: 600;
+    transition: transform .25s ease;
+}
+
+.btn-estado-reactivar:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+    .acciones-admin {
+        flex-direction: column;
+    }
+}
+
+@keyframes rowFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* =========================
+   BOTÓN VOLVER
+========================= */
+.btn-volver,
+a.btn-secondary {
+    background: linear-gradient(135deg,#475569,#1e293b);
+    color: #ffffff !important;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 22px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.18);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* HOVER */
+.btn-volver:hover,
+a.btn-secondary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.28);
+    background: linear-gradient(135deg,#1e293b,#020617);
+}
+
+/* CLICK */
+.btn-volver:active,
+a.btn-secondary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+/* =========================
+   BOTÓN CANCELAR (CENTRADO REAL)
+========================= */
+.btn-cancelar,
+a.btn-cancelar {
+    background: linear-gradient(135deg,#e5e7eb,#cbd5f5);
+    color: #1e293b !important;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 22px;
+    font-weight: 700;
+    letter-spacing: .3px;
+
+    display: flex;                 /* 🔥 clave */
+    align-items: center;           /* eje Y */
+    justify-content: center;       /* eje X */
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+/* HOVER */
+.btn-cancelar:hover,
+a.btn-cancelar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(0,0,0,.22);
+    background: linear-gradient(135deg,#cbd5f5,#a5b4fc);
+}
+
+/* ACTIVE */
+.btn-cancelar:active,
+a.btn-cancelar:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,.2);
+}
+
+/* =========================
+   HOVER SOLO EN EL TEXTO
+========================= */
+.admin-table td span,
+.admin-table td strong,
+.admin-table td a {
+    display: inline-block;
+    transition: transform .22s ease;
+}
+
+/* cuando pasas por el texto */
+.admin-table td span:hover,
+.admin-table td strong:hover,
+.admin-table td a:hover {
+    transform: translateY(-4px);
+}
+
+.texto-guia {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #1b7bdb, #09105a);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.2s ease;
+}
+
+.texto-salida {
+    font-weight: 500;
+    font-size: 14px;
+    background: linear-gradient(135deg, #b04b4b, #af1e1e);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.texto-entrega {
+    font-weight: 600;
+    font-size: 14px;
+    background: linear-gradient(135deg, #084934, #25a32b);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+/* CONTENEDOR */
+.card-kaiu-admin{
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+/* TITULO */
+.kaiu-title-admin{
+    font-weight:700;
+    text-align:center;
+    margin-bottom:25px;
+    color:#000000;
+    text-shadow:0 0 10px rgba(251, 0, 0, 0.6);
+}
+
+/* 🔍 CONTENEDOR DEL BUSCADOR */
+.buscador-container-admin{
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* 🔎 INPUT PRO */
+.buscador-admin{
+    width: 100%;
+    padding: 14px 18px 14px 45px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    background: linear-gradient(#fff,#fff) padding-box,
+                linear-gradient(90deg,#ff0000,#8b0000,#ff0000) border-box;
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+    outline: none;
+    transition: all .25s ease;
+    box-shadow: 0 5px 20px rgba(255,0,0,0.25);
+}
+
+/* ✨ ICONO LUPA */
+.buscador-container-admin::before{
+    content: "🔍";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    opacity: .6;
+}
+
+/* 🔥 FOCUS EFECTO PRO */
+.buscador-admin:focus{
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255,0,0,0.45);
+    border: 2px solid #ff0000;
+}
+
+/* 💥 HOVER SUAVE */
+.buscador-admin:hover{
+    box-shadow: 0 0 18px rgba(255,0,0,0.35);
+}
+
+/* ✖ BOTÓN LIMPIAR (opcional si quieres agregarlo luego) */
+.buscador-admin::-webkit-search-cancel-button{
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(92%) saturate(5400%) hue-rotate(355deg) brightness(95%) contrast(115%);
+}
+
+/* ❌ MENSAJE NO ENCONTRADO */
+.mensaje-no{
+    font-weight: 600;
+    color: #b30000;
+    text-align: center;
+    background: rgba(255,0,0,0.08);
+    border: 1px solid rgba(255,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    animation: aparecer .3s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* MENSAJE NO ENCONTRADO */
+.mensaje-no{
+    background:#ff3c3c;
+    color:#fff;
+    padding:8px;
+    border-radius:8px;
+    text-align:center;
+    font-weight:600;
+}
+
+/* 📂 ACORDEON FLOTANTE */
+.accordion-item{
+    background: transparent;
+    border:none;
+    margin-bottom:10px;
+}
+
+.accordion-button{
+    background: linear-gradient(90deg,#ff3c3c,#8b0000);
+    color:#fff;
+    font-weight:600;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    transition:0.3s;
+}
+
+.accordion-button:hover{
+    transform: scale(1.02);
+}
+
+
+/* 🔥 FILA RESALTADA PRO */
+.fila-producto.resaltado{
+    background: linear-gradient(90deg, rgba(255,0,0,0.08), rgba(255,255,255,0.2));
+    border-left: 5px solid #ff0000;
+    transform: scale(1.01);
+    box-shadow: 0 0 12px rgba(255,0,0,0.35);
+    transition: all .25s ease;
+    animation: glowKaiu 1.2s ease;
+}
+
+/* ✨ animación glow */
+@keyframes glowKaiu{
+    0%{
+        box-shadow: 0 0 0 rgba(255,0,0,0);
+    }
+    50%{
+        box-shadow: 0 0 18px rgba(255,0,0,0.5);
+    }
+    100%{
+        box-shadow: 0 0 12px rgba(255,0,0,0.35);
+    }
+}
+
+/* 🔍 efecto hover adicional */
+.fila-producto:hover{
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+/* 💥 nombre más notorio cuando coincide */
+.fila-producto.resaltado .nombre{
+    color: #b30000;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+/* 🔥 ID también resaltado */
+.fila-producto.resaltado .badge-admin{
+    background: #ff0000;
+    color: #fff;
+    box-shadow: 0 0 6px rgba(255,0,0,0.6);
+}
+
+/* 🎨 COLORES PRO */
+.color-circle{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    display:inline-block;
+    margin-right:6px;
+    border:2px solid #fff;
+    cursor:pointer;
+    position:relative;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15),
+                0 2px 6px rgba(0,0,0,0.25);
+    transition: all .25s ease;
+}
+
+/* ✨ BRILLO SUPERIOR */
+.color-circle::after{
+    content:"";
+    position:absolute;
+    top:2px;
+    left:3px;
+    width:40%;
+    height:40%;
+    border-radius:50%;
+    background: rgba(255,255,255,0.6);
+    filter: blur(1px);
+}
+
+/* 🔥 EFECTO HOVER PRO */
+.color-circle:hover{
+    transform: scale(1.5) translateY(-2px);
+    box-shadow: 0 0 0 2px #ff0000,
+                0 4px 10px rgba(0,0,0,0.35),
+                0 0 8px rgba(255,0,0,0.4);
+    z-index: 5;
+}
+
+/* 🎯 CUANDO ESTÁ ACTIVO (si luego lo quieres usar con JS) */
+.color-circle.activo{
+    transform: scale(1.4);
+    box-shadow: 0 0 0 2px #000,
+                0 0 10px rgba(0,0,0,0.5);
+}
+
+/* 🧾 TEXTO DE COLOR AL PASAR EL MOUSE */
+.color-circle:hover::before{
+    content: attr(data-title);
+    position:absolute;
+    bottom:130%;
+    left:50%;
+    transform:translateX(-50%);
+    background:#111;
+    color:#fff;
+    font-size:10px;
+    padding:3px 6px;
+    border-radius:6px;
+    white-space:nowrap;
+    opacity:1;
+    pointer-events:none;
+}
+
+/* animación entrada suave */
+@keyframes aparecerColor{
+    from{
+        opacity:0;
+        transform: scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+.color-circle{
+    animation: aparecerColor .3s ease;
+}
+
+/* BADGES */
+.badge-disponible{
+    background:#28a745;
+    padding:6px 10px;
+    border-radius:8px;
+    color:#fff;
+}
+
+.badge-stock-bajo{
+    background:#ffc107;
+    padding:6px 10px;
+    border-radius:8px;
+    color:#000;
+}
+
+.badge-inactivo{
+    background:#dc3545;
+    padding:6px 10px;
+    border-radius:8px;
+    color:#fff;
+}
+
+/* BOTON */
+.btn-admin{
+    background:#ff3c3c;
+    color:#fff;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:600;
+}
+
+.btn-admin:hover{
+    background:#8b0000;
+    color:#fff;
+}
+
+/* 🏷 badges hover */
+.badge-disponible:hover,
+.badge-stock-bajo:hover,
+.badge-inactivo:hover{
+    transform: scale(1.08);
+    cursor:pointer;
+}
+
+.icono-cat{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-right: 10px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.accordion-button:hover .icono-cat{
+    transform: scale(1.1);
+    transition: .3s;
+}

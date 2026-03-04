@@ -1,0 +1,1036 @@
+/* BODY PRINCIPAL DE TODOS LOS ARCHIVOS */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(
+        rgba(247,245,242,0.9),
+        rgba(247,245,242,0.9)
+    ),
+    url("../IMG/fondo-kaiu.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--negro);
+}
+
+/* CONTENEDOR */
+.jefe-logistica {
+    animation: fadeUpMant .6s ease;
+}
+
+/* TITULO */
+.jefe-logistica .jefe-title {
+    /* Centrado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Tipografía */
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: 1.2px;
+
+    /* Espaciados */
+    margin: 20px auto 30px auto;
+    padding: 12px 20px;
+
+    /* Colores */
+    color: #1f2937; /* gris oscuro elegante */
+
+    /* Detalles visuales */
+    background: linear-gradient(90deg, #f5f5f5, #ffffff, #f5f5f5);
+    border-radius: 12px;
+
+    /* Línea inferior tipo dashboard */
+    border-bottom: 4px solid #16a34a;
+
+    /* Sombra suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    /* Animación sutil */
+    transition: all 0.3s ease;
+}
+
+/*BOTON REGISTRAR*/
+.btn-registrar {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 15px rgba(34, 197, 94, 0.35);
+}
+
+.btn-registrar:hover {
+    background: linear-gradient(135deg, #15803d, #16a34a);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(22, 163, 74, 0.45);
+}
+
+.btn-registrar:active {
+    transform: scale(0.97);
+}
+
+/*BOTON ACTUALIZAR*/
+.btn-actualizar {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: #1f2937;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 15px rgba(251, 191, 36, 0.4);
+}
+
+.btn-actualizar:hover {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+    transform: translateY(-2px);
+}
+
+/* TABLA */
+.jefe-logistica .tabla-jefe-logis {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.jefe-logistica .thead-jefe-logis {
+    background: linear-gradient(135deg, #212529, #495057);
+    color: white;
+}
+
+.jefe-logistica .tabla-jefe-logis tbody tr {
+    transition: all .25s ease;
+}
+
+.jefe-logistica .tabla-jefe-logis tbody tr:hover {
+    background: #f1f3f5;
+    transform: scale(1.015);
+}
+
+.thead-jefe-logis th {
+    background: linear-gradient(135deg, rgb(84, 56, 16), #021a1f);
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 14px;
+    font-size: 0.85rem;
+    border: none;
+}
+
+/* BADGE-ID  */
+.jefe-logistica .badge-logistica {
+    background-color: #6d4c41;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* PRECIO LOGISTICA */
+.precio-logis {
+    display: inline-block;
+    padding: 6px 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1e7f43;
+    background: linear-gradient(135deg, #d4f8e8, #b6f0d3);
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(30, 127, 67, 0.25);
+    transition: all 0.25s ease-in-out;
+    letter-spacing: 0.5px;
+}
+
+/* Hover elegante */
+.precio-logis:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(30, 127, 67, 0.35);
+    background: linear-gradient(135deg, #b6f0d3, #8ae6b8);
+}
+
+/* Opcional: precios altos resaltados */
+.precio-logis.alto {
+    background: linear-gradient(135deg, #ffe0e0, #ffb3b3);
+    color: #b71c1c;
+    box-shadow: 0 4px 10px rgba(183, 28, 28, 0.25);
+}
+
+/*ESTADOS*/
+.estado{
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: .75rem;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* EN PRODUCCION */
+.estado-produccion{
+    background: #fde68a;
+    color: #92400e;
+}
+
+/* Hover estado-produccion */
+.estado-produccion:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(30, 127, 67, 0.35);
+    background: linear-gradient(135deg, #ead303, #def606);
+}
+
+/* TERMINADO */
+.estado-terminado{
+    background: #bbf7d0;
+    color: #166534;
+}
+
+/* Hover estado-terminado */
+.estado-terminado:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(30, 127, 67, 0.35);
+    background: linear-gradient(135deg, #48cf39, #49c836);
+}
+
+/* DESPACHADO */
+.estado-despachado{
+    background: #bfdbfe;
+    color: #1e40af;
+}
+
+/* Hover estado-despachado */
+.estado-despachado:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(30, 127, 67, 0.35);
+    background: linear-gradient(135deg, #626ae0, #6c7bdf);
+}
+
+/*BOTON EDITAR*/
+.btn-editar {
+    background: rgba(245, 158, 11, 0.25);
+    backdrop-filter: blur(6px);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    width: 35px;
+    height: 35px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.btn-editar:hover {
+    background: #f59e0b;
+    color: #fff;
+}
+
+/*ACCIONES BOTONES*/
+.acciones-botones {
+    display: inline-flex; /* 🔥 CLAVE */
+    align-items: center;
+    gap: 10px;
+    vertical-align: middle;
+}
+
+/*BOTON ELIMINAR*/
+.btn-eliminar-log {
+    background: rgba(239, 68, 68, 0.15);
+    backdrop-filter: blur(6px);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-eliminar-log:hover {
+    background: #ef4444;
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.45);
+}
+
+.btn-eliminar-log:active {
+    transform: scale(0.95);
+}
+
+/* BOTÓN VOLVER */
+.jefe-logistica .btn-secondaryi {
+    background: linear-gradient(135deg, #343a40, #212529);
+    color: white;
+    border: none;
+    padding: 10px 26px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    border-radius: 30px;
+    box-shadow: 0 8px 22px rgba(245, 243, 243, 0.25);
+    transition: all .3s ease;
+}
+
+/* HOVER */
+.jefe-logistica .btn-secondaryi:hover {
+    background: linear-gradient(135deg, #212529, #000);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+/* ACTIVE */
+.jefe-logistica .btn-secondaryi:active {
+    transform: scale(.95);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeUpMant {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BOTON DE INACTIVAR*/
+.jefe-logistica .btn-secondary {
+    background: linear-gradient(135deg, #343a40, #212529);
+    border: none;
+    padding: 10px 26px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    border-radius: 30px;
+    box-shadow: 0 8px 22px rgba(0,0,0,.25);
+    transition: all .3s ease;
+}
+
+/* HOVER */
+.jefe-logistica .btn-secondary:hover {
+    background: linear-gradient(135deg, #212529, #000);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+/* ACTIVE */
+.jefe-logistica .btn-secondary:active {
+    transform: scale(.95);
+}
+
+/*BOTON REACTIVAR*/
+.jefe-logistica .btn-secondaryy {
+    background: linear-gradient(135deg, #089422, #089422);
+    color: #fff !important;
+    border: none;
+    border-radius: 25px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+    height: 34px;
+    line-height: 1;
+    box-shadow: 0 8px 22px rgba(0,0,0,.25);
+    transition: 0.3s ease;
+}
+
+
+.jefe-logistica .btn-secondaryy:hover {
+    background: linear-gradient(135deg, #08411f, #089422);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 30px rgb(0, 0, 0);
+}
+
+.jefe-logistica .btn-secondaryy:active {
+    transform: scale(.95);
+}
+
+/* ===== STOCK ACTUAL ===== */
+.stock-badge {
+    display: inline-block;
+    min-width: 55px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* HOVER */
+.stock-badge:hover {
+     transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(30, 127, 67, 0.35);
+}
+
+/* Stock suficiente */
+.stock-ok {
+    background: linear-gradient(135deg, #e6f9f0, #c8f1df);
+    color: #1e7f55;
+    border: 1px solid #b6e8d4;
+}
+
+/* Stock bajo */
+.stock-bajo {
+    background: linear-gradient(135deg, #ffe5e5, #ffcccc);
+    color: #b42318;
+    border: 1px solid #f5b5b5;
+}
+
+/* ===== STOCK MÍNIMO ===== */
+.stock-min-badge {
+    display: inline-block;
+    min-width: 55px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f1f3f5, #e2e6ea);
+    color: #495057;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #d3d7dc;
+}
+
+/* HOVER */
+.stock-min-badge:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgb(199, 199, 199);
+}
+
+/* ===== BOTONES ESTADO COMPRA ===== */
+.btn-estado {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: .5px;
+    transition: all .25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+/* PENDIENTE */
+.btn-estado.pendiente {
+    background: linear-gradient(135deg, #ff9800, #ffb74d);
+    color: #fff;
+}
+
+.btn-estado.pendiente:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,.25);
+}
+
+/* RECIBIDA */
+.btn-estado.recibida {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: #fff;
+    cursor: default;
+}
+
+.btn-estado.recibida:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,.25);
+}
+
+/* =========================
+   BOTÓN VER DETALLE COMPRA
+========================= */
+.btn-detalle-compra {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0dcaf0;
+    background: rgba(13, 202, 240, 0.12);
+    border: 1.5px solid rgba(13, 202, 240, 0.5);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(13, 202, 240, 0.15);
+}
+
+/* Hover */
+.btn-detalle-compra:hover {
+    background: #0dcaf0;
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(13, 202, 240, 0.35);
+}
+
+/* Click */
+.btn-detalle-compra:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px rgba(13, 202, 240, 0.25);
+}
+
+/* Ícono */
+.btn-detalle-compra span,
+.btn-detalle-compra::before {
+    font-size: 1rem;
+}
+
+/* =========================
+   VER NOMBRE DE PROVEEDOR
+========================= */
+.nombre-proveedor {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0dcaf0;
+    background: rgba(13, 202, 240, 0.12);
+    border: 1.5px solid rgba(13, 202, 240, 0.5);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(13, 202, 240, 0.15);
+}
+
+/* Hover */
+.nombre-proveedor:hover {
+    background: #0dcaf0;
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(13, 202, 240, 0.35);
+}
+
+/* Click */
+.nombre-proveedor:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px rgba(13, 202, 240, 0.25);
+}
+
+/* Ícono */
+.nombre-proveedor span,
+.nombre-proveedor::before {
+    font-size: 1rem;
+}
+
+/* ESTADOS ACTIVO Y INACTIVO */
+.jefe-logistica .estado-activo-mant {
+    background: #20c997;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: .85rem;
+}
+
+.jefe-logistica .estado-inactivo-mant {
+    background: #e03131;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: .85rem;
+}
+
+/* BOTÓN DE ACTIVO Y INACTIVO */
+.jefe-logistica .btn-mant {
+    font-weight: 600;
+}
+
+/* PRECIO UNITARIO */
+.jefe-logistica .precio-unitario {
+    font-weight: 600;
+    color: #0d6efd; /* azul elegante */
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* PRECIO TOTAL */
+.jefe-logistica .precio-total {
+   font-weight: 700;
+    color: #198754; /* verde éxito */
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* ESTADO ENTREGADO */
+.estado-entregado {
+    background: linear-gradient(135deg,#dcfce7,#86efac);
+    color: #14532d;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: .8rem;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(22,163,74,.25);
+    transition: all .3s ease;
+}
+
+.estado-entregado:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(22,163,74,.35);
+}
+
+/* NUMERO DE GUIA TABLA DESPACHOS */
+.texto-guia {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.2s ease;
+}
+
+/* FECHA DE SALIDA TABLA DESPACHOS */
+.texto-salida {
+    font-weight: 500;
+    font-size: 14px;
+    background: linear-gradient(135deg, #4e73df, #af1e1e);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* FECHA DE ENTREGA TABLA DESPACHOS */
+.texto-entrega {
+    font-weight: 600;
+    font-size: 14px;
+    background: linear-gradient(135deg, #38d39f, #00b894);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* RESALTADOR DE BUSCADOR TABLA INVENTARIO*/
+.resaltado {
+    background-color: #fff3cd;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* CIRCCULOS DE MOSTRAR LOS COLORES TABLA INVENTARIO */
+.color-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.color-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f1f3f5;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.color-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.remove-color {
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.remove-color:hover {
+    color: red;
+}
+
+.form-control-color{
+    width:60px;
+    height:38px;
+    padding:2px;
+}
+
+
+.color-circle::after {
+    content: attr(data-color);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.color-circle:hover::after {
+    opacity: 1;
+}
+
+
+/* 🔥 CONTENEDOR PRINCIPAL */
+.mb-33 {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+/* 🔍 INPUT BUSCADOR */
+#buscador {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    outline: none;
+    background: rgba(20, 20, 20, 0.9);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Placeholder */
+#buscador::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+
+/* Efecto al enfocar */
+#buscador:focus {
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px rgba(0, 255, 255, 0.6);
+    transform: scale(1.02);
+}
+
+/* 🔔 MENSAJE SIN RESULTADOS */
+#sinResultados {
+    margin-top: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff4e50, #f00000);
+    color: #fff;
+    border: none;
+    animation: fadeIn 0.4s ease-in-out;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🎯 EFECTO HOVER (opcional) */
+#buscador:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+/* 🔥 CARD PRINCIPAL DE TODOS LOS ARCHIVOS */
+.card-jefe-logis {
+    background: #fff;
+    border-radius: 20px;                                                        
+    border: 1px solid rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.card-jefe-logis:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+}
+
+/* 🎨 HEADER DE TODOS LOS ARCHIVOS */
+.card-header-jefe-logis {
+    background: linear-gradient(135deg, rgb(84, 56, 16), #021a1f);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px;
+    border: none;
+}
+
+/* 🧊 BODY */
+.card-body {
+    padding: 30px;
+}
+
+/* ✨ INPUTS & SELECT */
+.form-control,
+.form-select {
+    background: linear-gradient(135deg, rgb(255, 255, 255), #ffffff);
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 12px;
+    padding: 12px 15px;
+    transition: 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+/* Glow al enfocar */
+.form-control:focus,
+.form-select:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+    background: #000000;
+    color: #fff;
+}
+
+/* 🎯 LABEL */
+.form-label {
+    color: #123038;
+    font-weight: 600;
+}
+
+/* BOTÓN DE AGREGAR COLOR */
+.btn-agregarcolor {
+    background: linear-gradient(135deg, rgb(84, 56, 16), #021a1f);
+    border: 1px solid #000000;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 15px;
+    transition: 0.3s ease;
+}
+
+/* =========================
+   🎯 ACORDEON PRO LOGISTICA
+========================= */
+
+.accordion-item {
+    border: none;
+    border-radius: 14px !important;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+/* hover suave tarjeta */
+.accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* header boton */
+.accordion-button {
+    background: linear-gradient(135deg, #5c1e1e, #d70b0b);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 14px 18px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+/* estado abierto */
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #3c3c17, #544922);
+    color: #fff;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
+}
+
+/* quitar borde feo bootstrap */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* icono flecha */
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* animacion flecha */
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg) scale(1.1);
+}
+
+/* cuerpo */
+.accordion-body {
+    background: #f8f9fa;
+    padding: 18px;
+    border-top: 1px solid #eee;
+}
+
+/* MEDIDAS DISPONIBLE Y AGOTADO TABLA INVENTARIO */
+.stock-medida{
+    padding:4px 10px;
+    border-radius:12px;
+    margin-bottom:4px;
+    font-size:13px;
+    width:fit-content;
+}
+
+.stock-medida.disponible{
+    background:#d1f7df;
+    color:#0a7a3d;
+}
+
+.stock-medida.agotado{
+    background:#ffd6d6;
+    color:#a80000;
+}
+
+/* CONTENEDOR DE MEDIDAA */
+#contenedorMedidas {
+    padding: 12px;
+    border-radius: 16px;
+    background: #f8fafc;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* FILA */
+.fila-medida-kaiu {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 10px;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.2s ease;
+}
+
+.fila-medida-kaiu:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* INPUTS */
+.input-medida-kaiu,
+.input-precio-kaiu,
+.input-stock-kaiu {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+/* FOCUS */
+.input-medida-kaiu:focus,
+.input-precio-kaiu:focus,
+.input-stock-kaiu:focus {
+    border-color: #e53935;
+    box-shadow: 0 0 6px rgba(229,57,53,0.3);
+    outline: none;
+}
+
+/* BOTON ELIMINAR */
+.btn-eliminar-kaiu {
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff4d4d, #c40000);
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-eliminar-kaiu:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(255,0,0,0.3);
+}
+
+/* BOTON AGREGAR MEDIDA */
+.btn-agregar-medida-kaiu {
+    margin-top: 12px;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgb(84, 56, 16), #021a1f);
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-agregar-medida-kaiu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(86, 72, 27, 0.4);
+}
+
+.icono-cat{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-right: 10px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.accordion-button:hover .icono-cat{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+/* Subtotal detalle_compra */
+.subtotal {
+    display: inline-block;
+    padding: 6px 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1e7f43;
+    background: linear-gradient(135deg, #d4f8e8, #b6f0d3);
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(30, 127, 67, 0.25);
+    transition: all 0.25s ease-in-out;
+    letter-spacing: 0.5px;
+}
+
+/* Hover elegante detalle_compra */
+.subtotal:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(30, 127, 67, 0.35);
+    background: linear-gradient(135deg, #b6f0d3, #8ae6b8);
+}
+
+/* PRECIO UNITARIO detalle_compra */
+.precio-unitarioo {
+    display: inline-block;
+    padding: 6px 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #000000;
+    background: linear-gradient(135deg, #f8d4d4, #ea9797);
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(168, 29, 29, 0.25);
+    transition: all 0.25s ease-in-out;
+    letter-spacing: 0.5px;
+}
+
+/* Hover elegante */
+.precio-unitarioo:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(151, 22, 22, 0.35);
+    background: linear-gradient(135deg, #de7676, #e68a8a);
+}

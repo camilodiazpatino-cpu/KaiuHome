@@ -1,0 +1,321 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(
+        rgba(247,245,242,0.9),
+        rgba(247,245,242,0.9)
+    ),
+    url("../IMG/fondo-kaiu.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--negro)
+}
+/* CONTENEDOR */
+.jefe-mantenimiento {
+    animation: fadeUpMant .6s ease;
+}
+
+/* TITULO */
+.jefe-mantenimiento .jefe-title {
+    /* Centrado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Tipografía */
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: 1.2px;
+
+    /* Espaciados */
+    margin: 20px auto 30px auto;
+    padding: 12px 20px;
+
+    /* Colores */
+    color: #1f2937; /* gris oscuro elegante */
+
+    /* Detalles visuales */
+    background: linear-gradient(90deg, #f5f5f5, #ffffff, #f5f5f5);
+    border-radius: 12px;
+
+    /* Línea inferior tipo dashboard */
+    border-bottom: 4px solid #16a34a;
+
+    /* Sombra suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    /* Animación sutil */
+    transition: all 0.3s ease;
+}
+
+/* CARD */
+.jefe-mantenimiento .card-jefe-mant {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    animation: fadeUp 0.6s ease;
+}
+
+.jefe-mantenimiento .card-header-jefe-mant {
+    background: linear-gradient(135deg, rgb(84, 56, 16), #021a1f);
+    color: white;
+    font-weight: 600;
+}
+
+/* TABLA */
+.jefe-mantenimiento .tabla-jefe-mant {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.jefe-mantenimiento .thead-jefe-mant {
+    background: linear-gradient(135deg, #212529, #495057);
+    color: white;
+}
+
+.jefe-mantenimiento .tabla-jefe-mant tbody tr {
+    transition: all .25s ease;
+}
+
+.jefe-mantenimiento .tabla-jefe-mant tbody tr:hover {
+    background: #f1f3f5;
+    transform: scale(1.015);
+}
+
+/* ESTADOS */
+.jefe-mantenimiento .estado-activa-mant {
+    background: #20c997;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: .85rem;
+}
+
+.jefe-mantenimiento .estado-inactiva-mant {
+    background: #e03131;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: .85rem;
+}
+
+/* BOTÓN */
+.jefe-mantenimiento .btn-mant {
+    font-weight: 600;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeUpMant {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.jefe-mantenimiento .badge-mantenimientor {
+    background-color: #6d4c41;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* BOTÓN VOLVER */
+.jefe-mantenimiento .btn-secondary {
+    background: linear-gradient(135deg, #343a40, #212529);
+    border: none;
+    padding: 10px 26px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    border-radius: 30px;
+    box-shadow: 0 8px 22px rgba(0,0,0,.25);
+    transition: all .3s ease;
+}
+
+/* BOTÓN REACTIVAR */
+.jefe-mantenimiento .btn-secondaryy {
+    background: linear-gradient(135deg, #089422, #089422);
+    color: white;
+    border: none;
+    padding: 10px 26px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    border-radius: 30px;
+    box-shadow: 0 8px 22px rgba(0,0,0,.25);
+    transition: all .3s ease;
+}
+
+/* HOVER BOTON VOLVER */
+.jefe-mantenimiento .btn-secondary:hover {
+    background: linear-gradient(135deg, #212529, #000);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+/* HOVER BOTÓN REACTIVAR */
+.jefe-mantenimiento .btn-secondaryy:hover {
+    background: linear-gradient(135deg, #08411f, #089422);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 30px rgb(0, 0, 0);
+}
+
+
+/* ACTIVE BOTON VOLVER */
+.jefe-mantenimiento .btn-secondary:active {
+    transform: scale(.95);
+}
+
+/* ACTIVE BOTÓN REACTIVAR */
+.jefe-mantenimiento .btn-secondaryy:active {
+    transform: scale(.95);
+}
+
+/* Precio mantenimiento */
+.precio-mant {
+    display: inline-block;
+    padding: 6px 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1e7f43;
+    background: linear-gradient(135deg, #d4f8e8, #b6f0d3);
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(30, 127, 67, 0.25);
+    transition: all 0.25s ease-in-out;
+    letter-spacing: 0.5px;
+}
+
+/* Hover elegante */
+.precio-mant:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(30, 127, 67, 0.35);
+    background: linear-gradient(135deg, #b6f0d3, #8ae6b8);
+}
+
+/* Opcional: precios altos resaltados */
+.precio-mant.alto {
+    background: linear-gradient(135deg, #ffe0e0, #ffb3b3);
+    color: #b71c1c;
+    box-shadow: 0 4px 10px rgba(183, 28, 28, 0.25);
+}
+
+/* ENCABEZADOS DE LAS TABLAS */
+.thead-jefe-mant th {
+    background: linear-gradient(135deg, rgb(84, 56, 16), #021a1f);
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 14px;
+    font-size: 0.85rem;
+    border: none;
+}
+
+/* BOTÓN REGISTRAR */
+.btn-registrar {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 15px rgba(34, 197, 94, 0.35);
+}
+
+.btn-registrar:hover {
+    background: linear-gradient(135deg, #15803d, #16a34a);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(22, 163, 74, 0.45);
+}
+
+.btn-registrar:active {
+    transform: scale(0.97);
+}
+
+/* BOTÓN ACTUALIZAR */
+.btn-actualizar {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: #1f2937;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 15px rgba(251, 191, 36, 0.4);
+}
+
+.btn-actualizar:hover {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+    transform: translateY(-2px);
+}
+
+/* BOTÓN EDITAR */
+.btn-editar {
+    background: rgba(245, 158, 11, 0.25);
+    backdrop-filter: blur(6px);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    width: 35px;
+    height: 35px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.btn-editar:hover {
+    background: #f59e0b;
+    color: #fff;
+}
+
+/* ORDEN DE LAS ACCIONES DE LOS BOTONES */
+.acciones-botones {
+    display: inline-flex; /* 🔥 CLAVE */
+    align-items: center;
+    gap: 10px;
+    vertical-align: middle;
+}
+
+/* BOTÓN ELIMINAR */
+.btn-eliminar-log {
+    background: rgba(239, 68, 68, 0.15);
+    backdrop-filter: blur(6px);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-eliminar-log:hover {
+    background: #ef4444;
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.45);
+}
+
+.btn-eliminar-log:active {
+    transform: scale(0.95);
+}
+
+/* 🟢 ACTIVO */
+.estado-activo {
+    background-color: #198754; /* verde bootstrap pro */
+}
+
+/* 🔴 INACTIVO */
+.estado-inactivo {
+    background-color: #dc3545; /* rojo bootstrap pro */
+}
